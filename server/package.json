@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd.. && cd client && npm start",
-    "dev": "concurrently \"nodemon app.js\" \"npm run client\""
+    "dev": "concurrently \"nodemon app.js\" \"npm run client\"",
+    "migrate": "npx knex migrate:latest --knexfile db/knexfile.js",
+    "rollback": "npx knex migrate:rollback --knexfile db/knexfile.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,8 @@
   "dependencies": {
     "concurrently": "^6.2.1",
     "express": "^4.17.1",
-    "nodemon": "^2.0.12"
+    "knex": "^0.95.11",
+    "nodemon": "^2.0.12",
+    "pg": "^8.7.1"
   }
 }
