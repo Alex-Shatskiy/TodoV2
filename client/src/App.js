@@ -5,7 +5,11 @@ import { useEffect } from "react"
 
 function App() {
   useEffect(() => {
-    axios.post("/addTodo", { todo: "work" })
+    axios.post("/addTodo", {
+      todo: "will this work?",
+      completed: true,
+      catagorie_id: 3,
+    })
     axios.get("/getAllTodo").then((res) => console.log(res.data))
   }, [])
 
