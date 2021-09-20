@@ -1,0 +1,89 @@
+.navbar {
+  display: flex;
+  height: 100%;
+  width: 15%;
+  background-color: pink;
+}
+.title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navbar-links {
+  width: 100%;
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  padding-left: 20px;
+  width: 77%;
+  height: 60%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.navbar-links li {
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  border: olive;
+  border-style: solid;
+}
+.navbar-links li:hover {
+  background-color: olive;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links,
+  .title {
+    display: none;
+  }
+  .navbar {
+    background-color: white;
+    width: 40%;
+  }
+  .navbar.active {
+    background-color: pink;
+  }
+  .navbar-links.active,
+  .title.active {
+    display: flex;
+  }
+}
